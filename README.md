@@ -132,3 +132,55 @@ The backend is designed to:
 
 ---
 
+## 🔒 API Security
+
+Securing the backend APIs is critical to protecting both user data and platform integrity. Below are the key security measures implemented:
+
+### Key Measures
+- **Authentication**: Only verified users can access protected endpoints using token-based authentication (e.g., JWT).
+- **Authorization**: Role-based access controls ensure that only users with the right permissions (e.g., host, admin) can perform specific actions.
+- **Rate Limiting**: Prevents abuse and brute-force attacks by limiting the number of requests from a single IP or user in a given time frame.
+- **Input Validation & Sanitization**: Prevents injection attacks (e.g., SQL, XSS).
+- **HTTPS Enforcement**: Ensures all data exchanged between client and server is encrypted.
+- **Secure Payment Handling**: Payment endpoints are isolated and integrated with trusted providers, with sensitive transaction data never stored in plain text.
+
+### Why It Matters
+- **User Data Protection**: Prevents unauthorized access to personal and sensitive user information.
+- **Transaction Security**: Secures financial data during booking and payment operations.
+- **System Integrity**: Protects backend systems from malicious activity and downtime.
+- **Trust and Compliance**: Maintains platform credibility and helps meet data protection regulations.
+
+---
+
+## 🔁 CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) streamline the development lifecycle by automating testing, building, and deploying code.
+
+### Why CI/CD is Important
+- **Faster Development**: Automates code integration and testing.
+- **Reduced Errors**: Catches bugs early in the development process.
+- **Consistent Deployments**: Ensures the same environment is used every time.
+- **Improved Collaboration**: Enables team members to work on features independently without integration conflicts.
+
+### Tools Used
+- **GitHub Actions**: Automates testing and deployment workflows.
+- **Docker**: Provides consistent environments for development, testing, and production.
+- **Docker Compose**: Manages multi-container environments easily.
+- **CI/CD Scripts**: Custom bash or YAML scripts to run builds, migrations, and tests.
+
+---
+
+## 🧪 Manual Review
+
+The project is regularly subjected to **manual code and feature reviews** to ensure:
+
+- **Security Compliance**: All endpoints and sensitive operations are double-checked.
+- **Functional Integrity**: Features are manually tested against requirements.
+- **Code Quality**: Developers verify that the code follows project standards.
+- **Documentation Accuracy**: README and API documentation reflect the current state of the codebase.
+
+Manual reviews are essential in addition to automated testing to catch issues related to user experience, unclear documentation, or edge cases that tools might miss.
+
+---
+
+
