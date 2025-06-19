@@ -264,7 +264,7 @@ Securing the backend APIs is critical to protecting both user data and platform 
 
 ---
 
-## 🔁 CI/CD Pipeline
+## 🔁 CI/CD Pipeline Overview
 
 Continuous Integration and Continuous Deployment (CI/CD) streamline the development lifecycle by automating testing, building, and deploying code.
 
