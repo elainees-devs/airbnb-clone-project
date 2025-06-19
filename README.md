@@ -163,8 +163,31 @@ The database schema is designed to support the core entities of the platform wit
 
 This design promotes data integrity, supports scalability, and ensures smooth querying across user activities, property availability, and transaction history.
 
----
+## 📂 Feature Breakdown
 
+This section provides a detailed explanation of the main features implemented in the Airbnb Clone Backend. Each feature plays a critical role in delivering a functional, secure, and user-friendly rental platform.
+
+### 👤 User Management
+
+Enables users to register, log in, and manage their profiles. Hosts can list properties, while guests can browse listings and make bookings. Authentication and role-based access ensure secure and personalized user experiences.
+
+### 🏠 Property Management
+
+Hosts can add, update, or remove property listings. Each listing includes details such as title, description, location, images, and pricing. This feature allows the platform to offer a wide variety of rental options to users.
+
+### 📆 Booking System
+
+Guests can book available properties for specified dates. The system ensures date conflict prevention, stores booking history, and supports check-in/check-out flows. It is essential for managing reservations and availability.
+
+### 💳 Payment Processing
+
+Handles secure payment transactions linked to bookings. Integrates with payment gateways to process charges and store transaction status, ensuring smooth and trustworthy monetary exchanges between guests and hosts.
+
+### 🌟 Review System
+
+Allows users to leave feedback on properties they’ve stayed in. This includes star ratings and written reviews, which help improve platform credibility and guide future users in decision-making.
+
+---
 
 ## 👥 Team Roles
 
