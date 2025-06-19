@@ -77,6 +77,95 @@ The backend is designed to:
 
 ---
 
+## 📦 Database Design
+
+The database schema is designed to support the core entities of the platform with clear relationships that reflect real-world interactions between users, properties, bookings, reviews, and payments.
+
+### 🔑 Key Entities & Relationships
+
+#### 1. **User**
+
+* `id`: Unique identifier (UUID)
+* `username`: Unique display name
+* `email`: Unique contact email
+* `password`: Hashed password
+* `is_host`: Boolean flag to identify hosts
+
+🔗 **Relationships**:
+
+* A user **can own multiple** properties (if `is_host`).
+* A user **can make multiple** bookings.
+* A user **can leave** multiple reviews.
+
+---
+
+#### 2. **Property**
+
+* `id`: Unique identifier
+* `title`: Name of the listing
+* `description`: Detailed information
+* `location`: Address or coordinates
+* `price_per_night`: Rental price
+
+🔗 **Relationships**:
+
+* A property **belongs to one** user (host).
+* A property **can have multiple** bookings.
+* A property **can have multiple** reviews.
+
+---
+
+#### 3. **Booking**
+
+* `id`: Unique identifier
+* `user_id`: Reference to the guest (User)
+* `property_id`: Reference to the property
+* `check_in`: Start date of stay
+* `check_out`: End date of stay
+
+🔗 **Relationships**:
+
+* A booking **belongs to one** user (guest).
+* A booking **belongs to one** property.
+* A booking **can have one** payment.
+
+---
+
+#### 4. **Review**
+
+* `id`: Unique identifier
+* `user_id`: Reference to the reviewer
+* `property_id`: Reference to the reviewed property
+* `rating`: Numerical rating (e.g., 1-5)
+* `comment`: Optional text review
+
+🔗 **Relationships**:
+
+* A review **belongs to one** user.
+* A review **belongs to one** property.
+
+---
+
+#### 5. **Payment**
+
+* `id`: Unique identifier
+* `booking_id`: Reference to the related booking
+* `amount`: Total paid
+* `status`: e.g., `pending`, `completed`, `failed`
+* `payment_method`: e.g., card, wallet
+
+🔗 **Relationships**:
+
+* A payment **is linked to one** booking.
+* A payment **is initiated by one** user indirectly through the booking.
+
+---
+
+This design promotes data integrity, supports scalability, and ensures smooth querying across user activities, property availability, and transaction history.
+
+---
+
+
 ## 👥 Team Roles
 
 - **Backend Developer**: API, logic, schema design
