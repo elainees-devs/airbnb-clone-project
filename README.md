@@ -1,8 +1,3 @@
-Here’s a professional and structured `README.md` file for your **Airbnb Clone Backend** project:
-
----
-
-```markdown
 # 🏡 Airbnb Clone - Backend
 
 ## 🚀 Overview
