@@ -281,18 +281,3 @@ Continuous Integration and Continuous Deployment (CI/CD) streamline the developm
 - **CI/CD Scripts**: Custom bash or YAML scripts to run builds, migrations, and tests.
 
 ---
-
-## 🧪 Manual Review
-
-The project is regularly subjected to **manual code and feature reviews** to ensure:
-
-- **Security Compliance**: All endpoints and sensitive operations are double-checked.
-- **Functional Integrity**: Features are manually tested against requirements.
-- **Code Quality**: Developers verify that the code follows project standards.
-- **Documentation Accuracy**: README and API documentation reflect the current state of the codebase.
-
-Manual reviews are essential in addition to automated testing to catch issues related to user experience, unclear documentation, or edge cases that tools might miss.
-
----
-
-
