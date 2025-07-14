@@ -1,12 +1,12 @@
-# 🏡 Airbnb Clone - Backend
+# Airbnb Clone - Backend
 
-## 🚀 Overview
+## Overview
 
 The **Airbnb Clone Backend** provides a robust and scalable foundation for managing core features of an online rental platform, including user interactions, property listings, bookings, and payment processing. Built with Django and GraphQL, this backend ensures smooth operations for users and hosts alike.
 
 ---
 
-## 🎯 Objective
+## Objective
 
 The backend is designed to:
 - Handle user registration, authentication, and profile management.
@@ -18,7 +18,7 @@ The backend is designed to:
 
 ---
 
-## 🏆 Project Goals
+## Project Goals
 
 - **User Management**: Secure registration, authentication, and user profile handling.
 - **Property Management**: Listing creation, updates, and deletion.
@@ -29,7 +29,7 @@ The backend is designed to:
 
 ---
 
-## 🛠️ Features Overview
+## Features Overview
 
 ### 1. API Documentation
 - **OpenAPI Standard**: Clear and standardized documentation for REST APIs.
@@ -62,7 +62,7 @@ The backend is designed to:
 
 ---
 
-## ⚙️ Technology Stack
+## Technology Stack
 
 | Tech               | Role                                      |
 |--------------------|-------------------------------------------|
@@ -77,11 +77,11 @@ The backend is designed to:
 
 ---
 
-## 📦 Database Design
+## Database Design
 
 The database schema is designed to support the core entities of the platform with clear relationships that reflect real-world interactions between users, properties, bookings, reviews, and payments.
 
-### 🔑 Key Entities & Relationships
+### Key Entities & Relationships
 
 #### 1. **User**
 
@@ -91,7 +91,7 @@ The database schema is designed to support the core entities of the platform wit
 * `password`: Hashed password
 * `is_host`: Boolean flag to identify hosts
 
-🔗 **Relationships**:
+**Relationships**:
 
 * A user **can own multiple** properties (if `is_host`).
 * A user **can make multiple** bookings.
@@ -107,7 +107,7 @@ The database schema is designed to support the core entities of the platform wit
 * `location`: Address or coordinates
 * `price_per_night`: Rental price
 
-🔗 **Relationships**:
+**Relationships**:
 
 * A property **belongs to one** user (host).
 * A property **can have multiple** bookings.
@@ -123,7 +123,7 @@ The database schema is designed to support the core entities of the platform wit
 * `check_in`: Start date of stay
 * `check_out`: End date of stay
 
-🔗 **Relationships**:
+**Relationships**:
 
 * A booking **belongs to one** user (guest).
 * A booking **belongs to one** property.
@@ -139,7 +139,7 @@ The database schema is designed to support the core entities of the platform wit
 * `rating`: Numerical rating (e.g., 1-5)
 * `comment`: Optional text review
 
-🔗 **Relationships**:
+**Relationships**:
 
 * A review **belongs to one** user.
 * A review **belongs to one** property.
@@ -154,7 +154,7 @@ The database schema is designed to support the core entities of the platform wit
 * `status`: e.g., `pending`, `completed`, `failed`
 * `payment_method`: e.g., card, wallet
 
-🔗 **Relationships**:
+**Relationships**:
 
 * A payment **is linked to one** booking.
 * A payment **is initiated by one** user indirectly through the booking.
@@ -163,33 +163,33 @@ The database schema is designed to support the core entities of the platform wit
 
 This design promotes data integrity, supports scalability, and ensures smooth querying across user activities, property availability, and transaction history.
 
-## 📂 Feature Breakdown
+## Feature Breakdown
 
 This section provides a detailed explanation of the main features implemented in the Airbnb Clone Backend. Each feature plays a critical role in delivering a functional, secure, and user-friendly rental platform.
 
-### 👤 User Management
+### User Management
 
 Enables users to register, log in, and manage their profiles. Hosts can list properties, while guests can browse listings and make bookings. Authentication and role-based access ensure secure and personalized user experiences.
 
-### 🏠 Property Management
+### Property Management
 
 Hosts can add, update, or remove property listings. Each listing includes details such as title, description, location, images, and pricing. This feature allows the platform to offer a wide variety of rental options to users.
 
-### 📆 Booking System
+### Booking System
 
 Guests can book available properties for specified dates. The system ensures date conflict prevention, stores booking history, and supports check-in/check-out flows. It is essential for managing reservations and availability.
 
-### 💳 Payment Processing
+### Payment Processing
 
 Handles secure payment transactions linked to bookings. Integrates with payment gateways to process charges and store transaction status, ensuring smooth and trustworthy monetary exchanges between guests and hosts.
 
-### 🌟 Review System
+### Review System
 
 Allows users to leave feedback on properties they’ve stayed in. This includes star ratings and written reviews, which help improve platform credibility and guide future users in decision-making.
 
 ---
 
-## 👥 Team Roles
+## Team Roles
 
 - **Backend Developer**: API, logic, schema design
 - **Database Administrator**: DB design and optimization
@@ -198,7 +198,7 @@ Allows users to leave feedback on properties they’ve stayed in. This includes 
 
 ---
 
-## 📈 API Documentation Overview
+## API Documentation Overview
 
 ### REST API
 - Detailed using **OpenAPI**.
@@ -209,33 +209,33 @@ Allows users to leave feedback on properties they’ve stayed in. This includes 
 
 ---
 
-## 📌 Endpoints Overview
+## Endpoints Overview
 
-### 👤 Users
+### Users
 - `GET /users/` – List users  
 - `POST /users/` – Create user  
 - `GET /users/{user_id}/` – Get user details  
 - `PUT /users/{user_id}/` – Update user  
 - `DELETE /users/{user_id}/` – Delete user  
 
-### 🏠 Properties
+### Properties
 - `GET /properties/` – List properties  
 - `POST /properties/` – Add property  
 - `GET /properties/{property_id}/` – Get property  
 - `PUT /properties/{property_id}/` – Update property  
 - `DELETE /properties/{property_id}/` – Delete property  
 
-### 📆 Bookings
+### Bookings
 - `GET /bookings/` – List bookings  
 - `POST /bookings/` – Create booking  
 - `GET /bookings/{booking_id}/` – Get booking  
 - `PUT /bookings/{booking_id}/` – Update booking  
 - `DELETE /bookings/{booking_id}/` – Cancel booking  
 
-### 💳 Payments
+### Payments
 - `POST /payments/` – Process payment  
 
-### 🌟 Reviews
+### Reviews
 - `GET /reviews/` – List reviews  
 - `POST /reviews/` – Add review  
 - `GET /reviews/{review_id}/` – Get review  
@@ -244,7 +244,7 @@ Allows users to leave feedback on properties they’ve stayed in. This includes 
 
 ---
 
-## 🔒 API Security
+## API Security
 
 Securing the backend APIs is critical to protecting both user data and platform integrity. Below are the key security measures implemented:
 
@@ -264,7 +264,7 @@ Securing the backend APIs is critical to protecting both user data and platform 
 
 ---
 
-## 🔁 CI/CD Pipeline Overview
+## CI/CD Pipeline Overview
 
 Continuous Integration and Continuous Deployment (CI/CD) streamline the development lifecycle by automating testing, building, and deploying code.
 
